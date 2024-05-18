@@ -1,0 +1,27 @@
+let user = {
+    name: 'Лев Толстой',
+    login: 'Leo_tolstoy',
+    reputation: 97,
+    total: 900
+}
+
+let messagesMama = [
+    {author: 'mama', text: 'Ты покушал?'},
+    {author: 'mama', text: 'Почему не отвечаешь?'},
+    {author: 'вы', text: 'Покушал, мам'}
+]
+
+let messagesWife = [
+    {author: 'вы', text: 'Устал и загрустил'},
+    {author: 'вы', text: 'Ленюсь'},
+    {author: 'wife', text: 'zzz'}
+]
+
+user.chats = {};
+
+user.chats.mama = messagesMama;
+user.chats.wife = messagesWife;
+
+for (let i = 0; i < user.chats.wife.length; i++) {
+    console.log(`${user.chats.wife[i].author}: ${user.chats.wife[i].text}`)
+}
